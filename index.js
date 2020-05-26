@@ -259,6 +259,17 @@ app.delete('/order/:id', async (req, res) => {
   }
 })
 
+app.delete('/basket/:id', async (req, res) => {
+  const { id } = req.params
+
+  try {
+    await Basket.findByIdAndDelete(id)
+    res.status(204).end()
+  } catch (error) {
+    res.status(400).json(error)
+  }
+})
+
 
 
 app.listen(app.get('port'), function () {
