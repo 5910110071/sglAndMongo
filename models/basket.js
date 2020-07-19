@@ -11,6 +11,7 @@ const basketSchema = new Schema({
   user_address : String,
   user_tel : String,
   saleman_id : String
+  
 });
 
 const BasketModel = mongoose.model('Basket', basketSchema)
