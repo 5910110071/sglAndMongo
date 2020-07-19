@@ -97,7 +97,7 @@ app.get('/orders', async (req, res) => {
 
 
 app.get('/orders/:id', async (req, res) => {
-  console.log("req.params", req.params)
+  console.log("req.params + 1", req.params)
   const orders = await Order.find({ user_id: req.params.id })
   res.json(orders)
 })
